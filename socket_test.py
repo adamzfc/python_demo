@@ -5,7 +5,7 @@ if __name__ == "__main__":
       
     CONNECTION_LIST = []    # list of socket clients
     RECV_BUFFER = 4096 # Advisable to keep it as an exponent of 2
-    PORT = 5000
+    PORT = 18112
          
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # this has no effect, why ?
@@ -41,7 +41,7 @@ if __name__ == "__main__":
                     # echo back the client message
                     if data:
                         print data
-                        #  sock.send('OK ... ' + data)
+                        sock.send('OK ... ' + data)
                  
                 # client disconnected, so remove from socket list
                 except:
